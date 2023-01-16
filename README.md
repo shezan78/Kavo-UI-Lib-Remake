@@ -149,3 +149,32 @@ Section:NewColorPicker("Color Text", "Color Info", Color3.fromRGB(0,0,0), functi
     -- Second argument is the default color
 end)
 ```
+
+## Applying Custom Themes / Colors
+Make new table, here you are going to put your colors, as shown below.
+```lua
+local colors = {
+    SchemeColor = Color3.fromRGB(0,255,255),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+```
+Applying it: Change your window code little bit.
+```lua
+local Window = Library.CreateLib("TITLE", colors)
+```
+
+## Want to add fully customizable UI?
+
+Add this code in your section. This will create color pickers.
+
+Make sure you have added table with all the values of UI. then apply it to window. Like shown above.
+```lua
+for theme, color in pairs(themes) do
+    Section:NewColorPicker(theme, "Change your "..theme, color, function(color3)
+        Library:ChangeColor(theme, color3)
+    end)
+end
+```
