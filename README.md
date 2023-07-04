@@ -6,6 +6,11 @@ Just remaking Kavo UI Lib as asked by Stefan.
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/shezan78/Kavo-UI-Lib-Remake/main/Kavo%20UI%20Library%20main%20source.lua"))()
 ```
 
+## Mobile UI
+```lua
+local kavoUi = loadstring(game:HttpGet("https://raw.githubusercontent.com/shezan78/Kavo-UI-Lib-Remake/main/Kavo%20Mobile%20UI.lua"))()
+```
+
 ## Creating UI Library Window
 ```lua
 local Window = Library.CreateLib("TITLE", "DarkTheme")
